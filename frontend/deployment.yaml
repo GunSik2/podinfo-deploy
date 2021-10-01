@@ -4,6 +4,7 @@ metadata:
   name: frontend
   namespace: test
 spec:
+  replicas: 2
   minReadySeconds: 3
   revisionHistoryLimit: 5
   progressDeadlineSeconds: 60
@@ -22,7 +23,6 @@ spec:
       labels:
         app: frontend
     spec:
-      replicas: 2
       containers:
       - name: frontend
         image: stefanprodan/podinfo:5.2.1
